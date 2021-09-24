@@ -1,0 +1,72 @@
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.background-gradient {
+    background: #1B1B1B;
+    height: 100vh;
+    width: 100vw;
+}
+
+#centro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 5px #f3235f;
+    padding: 50px;
+    border-radius: 30px;
+    margin-top: 20vh;
+    margin-bottom: 40px;
+    background-color: none;
+}
+
+#login {
+    display: flex;
+    flex-direction: column;
+}
+
+.entrada {
+    margin: 10px;
+    border: solid 1px;
+    background: rgba(0, 0, 0, 0.068);
+}
+
+html,
+body,
+main {
+    background: #1B1B1B;
+}
+
+label {
+    color: white;
+}
+
+#cpf,
+#senha {
+    background: none;
+    border: 2px solid #f3235f;
+    color: white
+}
+
+form > a{
+    color: #f3235f;
+    text-decoration: none;
+}
+
+form> a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.modal{
+    margin-top: 20%;
+}
+
+@media (max-width: 480px) {
+    .modal {
+        margin-top: 50%;
+    }
+}

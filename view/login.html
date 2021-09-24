@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ResiliaFlix</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!--Icon-->
+    <link rel="shortcut icon" href="assets/img/logo/icone.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <header>
+        <!--Menu de navegação-->
+        <nav class="navbar navbar-expand-lg navbar-light navbar-estilo fixed-top ">
+            <div class="container-fluid">
+                <a class="navbar-brand fonte-logo fw-bold fs-3 p-2" href="..//index.html">ResiliaFlix</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav w-100 d-flex justify-content-between ">
+                        <li class="nav-item text-center">
+                            <a class="nav-link fonte-nav fs-6 p-3" href="pagBusca.html"><i class="fas fa-search"></i> Buscar</a>
+                        </li>
+                        <div class="d-flex nav-media">
+                            <li class="nav-item ">
+                                <a class="nav-link fonte-nav fs-6 p-3 div-media" href="contato.html"><i class="fas fa-comment-dots"></i>  Contato</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fonte-nav fs-6 p-3" href="cadastro.html"><i class="fas fa-user-plus"></i> Cadastro</a>
+                            </li>
+                            <!-- Botão login e dados-->
+                            <div class="btn-group ">
+                                <button class="btn  btn-lg" type="button">
+                                  <a class="nav-link fonte-nav fs-6"  href="login.html"> <i class="fas fa-user-circle"></i> Login</a>
+                                </button>
+                                <button type="button" class="btn btn-lg  dropdown-toggle dropdown-toggle-split fonte-nav" data-bs-toggle="dropdown" aria-expanded="false">
+                                </button>
+                                <ul class="dropdown-menu fonte-nav fs-6 w-1 position-media">
+                                    <a class="nav-link px-4" href="consulta.html"> Meus dados</a>
+                                </ul>
+                            </div>
+                            </li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="centro">
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Digite Seu email</label>
+                    <input type="email" class="form-control" id="id" placeholder="exemplo@exemplo.com" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Digite sua Senha:</label>
+                    <input type="password" class="form-control" id="senha" placeholder="*********">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Lembre-se de mim</label>
+                </div>
+                <br>
+                <button onclick="login()" type="submit" class="btn btn-outline-success" id="btnLogin">Login</button>
+
+
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                   Esqueci a senha
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Digite seu email</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mb-3">
+
+                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="exemplo@exemplo.com" aria-describedby="emailHelp">
+                                    <div id="emailHelp" class="form-text">Nos nunca iremos dividir seus dados.</div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                <button type="button" class="btn btn-outline-success">Salvar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <a href="cadastro.html">Não possui conta? clique aqui!</a>
+            </form>
+
+
+        </div>
+
+    </main>
+
+
+    <!--Modal-->
+    <div class="modal" tabindex="-1" id="showModalError">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-danger" id="tituloErro"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p> Seu Usuario ou Senha não conferem.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/Modal-->
+    <footer class="mb-auto navbar-estilo media-footer fixed-bottom">
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-6 col-md-4 d-flex">
+
+                    <div class="d-flex col-3 col-md-2 align-self-center  ">
+                        <a href="../index.html"><img src="assets/img/logo/logo.png" width="70"></a>
+                    </div>
+                    <div class="col-3 col-md-2 d-flex align-self-center mt-auto mx-3">
+                        <a class=" nav-link fonte-logo fw-bold fs-5 fonte-footer" href="../index.html">ResiliaFlix</a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 d-flex justify-content-center align-self-center">
+
+                    <h6 class="fonte-corpo fonte-nav">Todos os direitos Reservados ©</h6>
+                </div>
+
+
+            </div>
+
+        </div>
+        </div>
+    </footer>
+
+
+
+
+    <!--/Rodapé-->
+
+    <!--Jquery | BootstrapScript-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="assets/js/loginView.js"></script>
+    <script src="../controller/loginController.js"></script>
+    <script src="../model/Login.js"></script>
+
+</body>
+
+</html>

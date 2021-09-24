@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se - ResiliaFlix</title>
+
+     <!--CSS-->
+     <link rel="stylesheet" href="assets/css/cadastro.css">
+     <link rel="stylesheet" href="assets/css/index.css">
+
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ 
+     <!-- Font Awesome Icons -->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+ 
+     <!--Icon-->
+     <link rel="shortcut icon" href="assets/img/logo/icone.png" type="image/x-icon">
+
+     
+</head>
+<body>
+
+  <header>
+    <!--Menu de navegação-->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-estilo fixed-top ">
+      <section class="container-fluid">
+        <a class="navbar-brand fonte-logo fw-bold fs-3 p-2" href="../index.html">ResiliaFlix</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav w-100 d-flex justify-content-between ">
+            <li class="nav-item text-center">
+              <a class="nav-link fonte-nav fs-6 p-3" href="/view/"><i class="fas fa-search"></i> Buscar</a>
+            </li>
+            <div class="d-flex nav-media">
+            <li class="nav-item ">
+              <a class="nav-link fonte-nav fs-6 p-3 div-media" href="contato.html"><i class="fas fa-comment-dots"></i>
+                Contato</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fonte-nav fs-6 p-3" href="cadastro.html"><i class="fas fa-user-plus"></i> Cadastro</a>
+            </li>
+            <!-- Botão login e dados-->
+            <div class="btn-group ">
+              <button class="btn  btn-lg btn-login" type="button">
+                <a class="nav-link fonte-nav fs-6"  href="login.html"> <i class="fas fa-user-circle"></i> Login</a>
+              </button>
+              <button type="button" class="btn btn-lg  dropdown-toggle dropdown-toggle-split fonte-nav btn-login"
+                data-bs-toggle="dropdown" aria-expanded="false">
+              </button>
+              <ul class="dropdown-menu fonte-nav fs-6 w-1 position-media ">
+                <a class="nav-link px-4" href="consulta.html"> Meus dados</a>
+              </ul>
+            </div>
+          </ul>
+        </div>
+      </section>
+    </nav>
+  </header>
+
+
+
+    <main>
+      <section class="container"><!--Carrousel de destaques? 🤔 thinkin-->
+          
+      </section>
+
+        <section class="container margim-top" ><!--Formulario-->
+          <h2 class="">Preencha o formulario para efetivar seu cadastro!</h2>
+            <form action="">
+              
+              <div class="row justify-content-center"><!--Info pessoais-->
+                <div class="form-group col-12 col-md-6 col-lg-3">
+                  <label for="nome"> Nome:</label>
+                  <input class="form-control" type="text" name="nome" id="nome" placeholder="Manoel" required autofocus size="50" maxlength="50">
+                </div>
+                <div class="form-group col-12 col-md-6 col-lg-3">
+                  <label for="nome">Sobrenome:</label>
+                  <input class="form-control" type="text" name="snome" id="snome" placeholder="José Maria" required size="50" maxlength="50">
+                </div>
+                <div class="form-group col-12 col-md-6 col-lg-3">
+                  <label for="nome">Data de Nascimento:</label>
+                  <input class="form-control" type="date" name="datanasc" id="datanasc" placeholder="05/09/1988" value="" required>
+                </div>
+                <div class="form-group col-12 col-md-6 col-lg-3">
+                  <label for="nome">CPF:</label>
+                  <input class="form-control" type="number" name="cpf" id="cpf" placeholder="12345678910" required size="11" maxlength="11"onkeyup="somenteNumeros(this)">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group col-12 col-md-6 col-lg-3">
+
+                  <label for="rg">RG:</label>
+                  <input class="form-control" type="number" name="rg" id="rg" required placeholder="12345678" class="form-group col-12 col-md-6 col-lg-3">
+                </div>
+
+                <div class="form-group col-12 col-md-6 col-lg-3">
+                  <label for="nome">Tel/Cel:</label>
+                  <input class="form-control" type="number" name="cel" id="cel" placeholder="11912349321" required size="11" maxlength="11"onkeyup="somenteNumeros(this)">
+                </div>
+                
+                
+                <div class="form-group col-12 col-md-6 col-lg-3">
+                  <label for="sex">Sexo:</label>
+                  <select class="form-control" name="sex" id="sex" required>
+                    <option value="">Escolha</option>
+                    <option value="mc">Masculino Cis</option>
+                    <option value="fc">Feminino Cis</option>
+                    <option value="mt">Masculino Trans</option>
+                    <option value="ft">Feminino Trans</option>
+                    <option value="gnb">Genero não-Binário</option>
+                  </select>
+                </div>
+                <div class="form-group col-12 col-md-6 col-lg-3 mb-5">
+                  <label for="estciv">Estado Civil:</label>
+                  <select class="form-control" name="estciv" id="estciv" required>
+                    <option value="">Escolha</option>
+                    <option value="sol">Solteir(a)</option>
+                    <option value="cas">Casad(a)</option>
+                    <option value="div">Divorciad(a)</option>
+                    <option value="viu">Viuv(a)</option>
+                  </select>
+                </div>
+                
+                <hr>
+              </div><!-- Info Pessoais-->
+
+              <div class="container"><!--InfoAcesso-->
+                <div class="row">
+                  <h4>Infomações de Acesso:</h4>
+                  <div class="form-group col-12 col-md-6 col-lg-3" id="demail">
+                    <label for="id">Email:</label>
+                    <input class="form-control" type="email" name="id" id="id" placeholder="exemplo@exemplar.com.br" size="50" required maxlength="50" onblur="validacaoEmail(this)">
+                  </div>
+                  <div class="form-group col-12 col-md-6 col-lg-3" id="dsenha">
+                    <label for="senha">Senha:</label>
+                    <input class="form-control" type="password" name="senha" id="senha" placeholder="*********" size="50" required maxlength="50">
+                  </div>
+                  <div class="form-group col-12 col-md-6 col-lg-3" id="dcsenha">
+                    <label for="csenha">Confirme sua Senha:</label>
+                    <input class="form-control" type="password" name="csenha" id="csenha" placeholder="********" size="50" required maxlength="50">
+                  </div>
+                </div>
+              </div><!--/infoAcesso-->
+
+              <div class="row mt-5"><!--Endereço-->
+                <h4 class="">Informe seu CEP e Confirme seu endereço:</h4>
+
+                <div class="form-group  col-12 col-md-6 " >
+                  <label for="">CEP:</label>
+                  <input class="form-control" type="number" name="cep" id="cep" placeholder="00000000" size="8" maxlength="8" onkeyup="somenteNumeros(this)">
+                </div>
+               
+                <div class="form-group mt-2 col-12 col-md-6 align-self-center">
+                  <button class="btn btn-outline-success mt-3" id="btnPesquisar" type="submit" onclick="pesquisaCEP()">Pesquisar Cep 🔍</button>
+                  <button class="btn btn-outline-danger mt-3 " id="btnLimparEnd" type="submit" onclick="limparCEP()">Limpar Endereço 🧹</button>
+                  <button class="btn btn-outline-danger mt-3 " id="btnClean" type="submit" onclick="limparCampos()">Limpar Tudo 🗑️</button>
+                </div>
+                
+              </div>
+
+              <div class="row">
+                <div class="form-group col-12 col-md-6 col-lg-4">
+                  <label for="rua">Rua:</label>
+                  <input class="form-control" disabled type="text" name="rua" id="rua" required>
+                </div>
+                <div class="form-group col-12 col-md-6 col-lg-4">
+                  <label for="num">Numero:</label>
+                  <input class="form-control" disabled type="number" name="num" id="num" onkeyup="somenteNumeros(this)">
+                </div>
+              
+                <div class="form-group col-12 col-md-6 col-lg-4">
+                  <label for="comp">Complemento:</label>
+                  <input class="form-control" disabled type="text" name="comp" id="comp">
+                </div>
+                <div class="form-group col-12 col-md-6 col-lg-4">
+                  <label for="bairro">Bairro:</label>
+                  <input class="form-control" disabled type="text" name="bairro" id="bairro" required>
+                </div>
+                 
+                <div class="form-group col-12 col-md-6 col-lg-4">
+                  <label for="city">Cidade:</label>
+                  <input class="form-control" disabled type="text" name="city" id="city" required>
+                </div>
+                <div class="form-group col-12 col-md-6 col-lg-4">
+                  <label for="est">Estado:</label>
+                  <input class="form-control" disabled type="text" name="est" id="est" required>
+                </div>
+                
+                <div class="form-group mt-2 mb-5 mb-md-0 col-12 align-self-center">
+                  <button class="btn btn-outline-success col-12 mt-1 " id="btnCadastrar" type="submit" onclick="cadastrar()">Cadastrar 🧍✔️</button>  
+                </div>
+
+                <div class="mb-5"></div>
+              </div><!--/Endereço-->
+               
+            </form>
+
+        </section><!--/Formulario-->
+
+    </main>
+    <!--Modal-->
+    <div class="modal" tabindex="-1" id="showModalSuccess">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-success" id="tituloSuccess"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p id="msgSuccess"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/Modal-->
+
+       <!--Modal-->
+       <div class="modal" tabindex="-1" id="showModalError">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-danger" id="tituloErro"></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p id="msgErro"></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-danger" id="btnErrorModal" data-bs-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/Modal-->
+
+    <footer class="mb-auto navbar-estilo media-footer ">
+      <div class="container-fluid ">
+        <div class="row">
+          <div class="col-6 col-md-4 d-flex">
+  
+            <div class="d-flex col-3 col-md-2 align-self-center  ">
+              <a href="../index.html"><img src="assets/img/logo/logo.png" width="70"></a>
+            </div>
+            <div class="col-3 col-md-2 d-flex align-self-center mt-auto mx-3">
+          <a class=" nav-link fonte-logo fw-bold fs-5 fonte-footer" href="../index.html">ResiliaFlix</a>
+            </div>
+          </div>
+  
+          <div class="col-6 col-md-4 d-flex justify-content-center align-self-center">
+  
+            <h6 class="fonte-corpo fonte-nav">Todos os direitos Reservados ©</h6>
+          </div>
+
+            
+            </div>
+            
+        </div>
+      </div>
+    </footer><!--/Rodapé-->
+    
+    
+    <!--Jquery | BootstrapScript-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="assets/js/cadastroView.js"></script>
+    <script src="../controller/cadastroControler.js"></script>
+    <script src="../model/Cadastro.js"></script>
+</body>
+</html>
